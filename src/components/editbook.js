@@ -15,6 +15,12 @@ class Edit extends Component {
     this.props.updatemanga(this.state)
     this.props.history.push("/")
   }
+  componentDidMount(){
+    this.setState({
+       ...this.props.mangas.filter(manga=> String(manga.id) === this.props.match.params.id)[0]
+
+    })
+  }
 
   render() {
     return (

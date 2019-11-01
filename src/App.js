@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import SearchFilter from './components/search';
 import BookList from "./components/bookslist";
 import NavMenu from "./components/navbar";
 import Edit from "./components/editbook";
@@ -11,6 +12,7 @@ function App() {
     <Router>
       <div className="App">
         <NavMenu />
+        <SearchFilter/> 
         <Switch>
           <Route exact path="/" component={BookList} />
           <Route exact path="/edit/:id" component={Edit} />

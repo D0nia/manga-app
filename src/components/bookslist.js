@@ -3,10 +3,12 @@ import BookItem from "./booksitem";
 import "../App.css";
 import { connect } from "react-redux";
 
-const BookList = ({ mangas }) => {
+const BookList = (props) => {
+  const {mangas, nameFilter} = props
+  console.log(nameFilter)
   return (
     <div className="mangas">
-      {mangas.map((manga, index) => (
+      {mangas.filter(el=>el.Title.toLowerCase().includes(nameFilter.toLowerCase())).map((manga, index) => (
         <BookItem manga={manga} key={index} />
       ))}
     </div>
@@ -15,7 +17,8 @@ const BookList = ({ mangas }) => {
 
 const mapStateToProps = state => {
   return {
-     mangas: state.mangaReducers
+     mangas: state.mangaReducers,
+     nameFilter: state.titleFilterReducer.nameFilter
     }
 }
 

@@ -18,3 +18,9 @@ export const editmanga = editedManga =>{
     editedManga
   }
 }
+
+export const nameFilter = (titleFilter)=>({
+      type:'SET_TITLE_FILTER',
+      titleFilter
+  })
+  

@@ -6,6 +6,7 @@ const initialState = [
     id: uuid(),
     Title: "Shingeki No Kyojin V1",
     Price: "40$",
+    rating: 5,
     img:
       "https://images-na.ssl-images-amazon.com/images/I/51r5Zr3BzCL._SX331_BO1,204,203,200_.jpg"
   },
@@ -13,12 +14,14 @@ const initialState = [
     id: uuid(),
     Title: "Promise neverland V1",
     Price: "25$",
+    rating: 4,
     img: "https://images-na.ssl-images-amazon.com/images/I/81GIb6GMhRL.jpg"
   },
   {
     id: uuid(),
     Title: "Death Note V1",
     Price: "30$",
+    rating: 5,
     img: "http://kitabal.az/img/books/995367.jpg"
   }
 ];
